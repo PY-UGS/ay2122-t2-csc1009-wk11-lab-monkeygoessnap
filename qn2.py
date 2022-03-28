@@ -9,6 +9,17 @@
 # Create an object for clockTime class. Set the time by keyboard inputs for hours’ value,
 # minutes’ value, and seconds’ value. Then display the time after setting of the new time.
 
+# Program output 1:
+# Enter hours value: 23
+# Enter minutes value: 59
+# Enter seconds value: 59
+# Time: 23:59:59
+
+# Program output 2 (Error checking):
+# Enter hours value: 23
+# Enter minutes value: 60
+# Minute cannot be less than 0 or more than 59
+
 # class clocktime
 class clockTime:
     # constructor
@@ -43,7 +54,7 @@ class clockTime:
     def showTime(self):
         # format output stirng to 00:00:00
         # prints the output string
-        print("{:02d}:{:02d}:{:02d}".format(self.hours,self.minutes,self.seconds))
+        print("Time: {:02d}:{:02d}:{:02d}".format(self.hours,self.minutes,self.seconds))
 # main method
 def main():
     # create new clocktime object

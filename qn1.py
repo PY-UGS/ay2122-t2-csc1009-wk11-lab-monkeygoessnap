@@ -9,6 +9,24 @@
 # Create an object for calculator class. Perform all operations by keyboard inputs for 2
 # numbers. Then display the results. Finally reset to 0.
 
+# Program output 1: 
+# Enter number 1: 10  
+# Enter number 2: 50
+# Adder : 10.0 + 50.0 = 60.0
+# Subtractor : 10.0 - 50.0 = -40.0
+# Multiplier : 10.0 * 50.0 = 500.0
+# Divider : 10.0 / 50.0 = 0.2
+# Inputs cleared
+
+# Program output 2 (Error checking):
+# Enter number 1: 10
+# Enter number 2: 0
+# Adder : 10.0 + 0.0 = 10.0
+# Subtractor : 10.0 - 0.0 = 10.0
+# Multiplier : 10.0 * 0.0 = 0.0
+# Divider : Cannot divide by zero!
+# Inputs cleared
+
 # create new calculator class
 class Calculator:
     # constructor for calculator
@@ -28,36 +46,36 @@ class Calculator:
     # adder method
     def adder(self):
         # prints adder formatting
-        print("Adder :", end='')
+        print("Adder : ", end='')
         # prints results of input1 + input2
         print("{} + {} = {}".format(self.input1,self.input2,self.input1+self.input2))
 
     # subtractor method
     def subtractor(self):
         # prints substractor formatting
-        print("Subtractor :", end='')
+        print("Subtractor : ", end='')
         # prints results of input1 - input2
         print("{} - {} = {}".format(self.input1,self.input2,self.input1-self.input2))
 
     # multiplier method
     def multiplier(self):
         # prints multiplier formatting
-        print("Multiplier :", end='')
+        print("Multiplier : ", end='')
         # prints results of input1 * input2
         print("{} * {} = {}".format(self.input1,self.input2,self.input1*self.input2))
 
     # divider method
     def divider(self):
         # prints divider formatting
-        print("Divider :", end='')
+        print("Divider : ", end='')
         # handles error
         try:
             # prints results of input1/input2
-            print("{} - {} = {}".format(self.input1,self.input2,self.input1 / self.input2))
+            print("{} / {} = {}".format(self.input1,self.input2,self.input1 / self.input2))
         # handles zerodivision exception
         except ZeroDivisionError:
             # prints error string
-            print("cannot divide by zero!")
+            print("Cannot divide by zero!")
 
     # clear method
     def clear(self):
@@ -65,7 +83,7 @@ class Calculator:
         self.input1 = 0
         self.input2 = 0
         # prints confirmation
-        print("Cleared")
+        print("Inputs cleared")
 
 # main method
 def main():
